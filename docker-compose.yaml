@@ -1,14 +1,13 @@
-version: '3'
+version: "3.8"
 services:
-  node:
-    image: node
+  web:
+    container_name: infinity-scroll
+    hostname: infinity-scroll
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: .  # The Dockerfile is in the current directory
     ports:
-      - '3000:3000'
+      - 3000:3000
     volumes:
-      - ./:/srv/infinity-scroll
-      - /srv/infinity-scroll/node_modules
-    working_dir: /srv/infinity-scroll
-    command: 'yarn dev'
+      - .:/srv/infinity-scroll
+      - /srv/infinity-scroll/node_modules  # Ensure `/app/node_modules` is always empty in the container  exclude:
+    command: yarn dev

@@ -11,7 +11,7 @@
 
 ## 🔖 About
 
-CDR Asterisk is a web application written with the codeigniter 4 framework, which allows you to view the details of a call and listen to recordings.
+Infinity scroll is a web application written with the Next.js. Based on Mario Souto class.
 
 ## 🚀 Technologies
 
@@ -42,7 +42,7 @@ yarn dev
 
 #### Or run in docker
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 ## ℹ️ Info
