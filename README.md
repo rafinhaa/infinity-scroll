@@ -40,6 +40,11 @@ yarn install
 yarn dev
 ```
 
+#### Or run in docker
+```bash
+docker-compose up -d
+```
+
 ## ℹ️ Info
 
 The first search in API is username rafinhaa

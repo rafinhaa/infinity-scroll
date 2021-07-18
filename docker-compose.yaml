@@ -9,5 +9,6 @@ services:
       - '3000:3000'
     volumes:
       - ./:/srv/infinity-scroll
+      - /srv/infinity-scroll/node_modules
     working_dir: /srv/infinity-scroll
     command: 'yarn dev'

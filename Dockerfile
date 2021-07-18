@@ -5,10 +5,15 @@ WORKDIR /srv/infinity-scroll
 
 # install app dependencies
 COPY package*.json /srv/infinity-scroll
-RUN yarn install -y
 
 # add app
 COPY . /srv/infinity-scroll
 
-# start app
-CMD ["yarn", "dev"]
+# mount the volumes
+VOLUME /srv/infinity-scroll
+VOLUME /srv/infinity-scroll/node_modules
+
+EXPOSE 3000
+
+# build nextjs files
+RUN yarn install
